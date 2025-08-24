@@ -1,0 +1,43 @@
+INICIO
+
+    Inicializar los puntos de JugadorNo1 en 0
+    Inicializar los puntos de JugadorNo2 en 0
+    Establecer Juego_Activo como Verdadero
+    
+    MIENTRAS Juego_Activo sea Verdadero:
+        
+        Solicitar la elección de JugadorNo1 (Piedra, Papel o Tijera)
+        Solicitar la elección de JugadorNo2 (Piedra, Papel o Tijera)
+
+        SI la elección de alguno de los jugadores no es válida:
+            Mostrar mensaje de error y continuar al siguiente ciclo (volver a pedir elección)
+
+        SI la elección de ambos jugadores es la misma:
+            Mostrar mensaje de "Empate" y continuar al siguiente ciclo
+        
+        SI las elecciones son diferentes:
+            
+            Comprobar las combinaciones y asignar puntos al jugador correspondiente:
+                SI JugadorNo1 elige "Piedra" y JugadorNo2 elige "Tijera":
+                    JugadorNo1 gana un punto
+                SI JugadorNo1 elige "Papel" y JugadorNo2 elige "Piedra":
+                    JugadorNo1 gana un punto
+                SI JugadorNo1 elige "Tijera" y JugadorNo2 elige "Papel":
+                    JugadorNo1 gana un punto
+                SI JugadorNo2 elige "Piedra" y JugadorNo1 elige "Tijera":
+                    JugadorNo2 gana un punto
+                SI JugadorNo2 elige "Papel" y JugadorNo1 elige "Piedra":
+                    JugadorNo2 gana un punto
+                SI JugadorNo2 elige "Tijera" y JugadorNo1 elige "Papel":
+                    JugadorNo2 gana un punto
+
+        Mostrar los puntajes actuales de ambos jugadores
+        
+        Preguntar si desean jugar otra vez (si/no):
+            SI la respuesta es "no":
+                Establecer Juego_Activo como Falso
+
+    Mostrar mensaje de "Juego Terminado"
+    Mostrar el puntaje final de ambos jugadores
+
+FIN
